@@ -117,10 +117,10 @@ MonoBehaviour:
   _customWaves: 0
   randomSeed: 891
   _basicWaveSettings:
-    numWaves: 2
+    numWaves: 3
     amplitude: 0.1
     direction: -176
-    wavelength: 8
+    wavelength: 26.4
   _foamSettings:
     foamType: 1
     basicFoam:
