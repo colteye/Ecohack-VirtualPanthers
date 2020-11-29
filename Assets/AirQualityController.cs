@@ -9,15 +9,9 @@ public class AirQualityController : MonoBehaviour
     [SerializeField] float MaxEmissions = 91;
     [SerializeField] float particleMaxSize = 100;
 
-    [SerializeField] Text EmissionsText;
-
-    // Assume level goes from 0 to 1.
-    public void ChangeEmissions(float level)
+    public void ChangeEmissions(float emissions)
     {
-        float currentEmissions = level * MaxEmissions;
-        EmissionsText.text = string.Format("Current Emissions: {0} Billion Metric Tons of CO2", currentEmissions);
-
         var main = AirQualityParticle.main;
-        main.startSize = level * particleMaxSize;
+        main.startSize = emissions / MaxEmissions * particleMaxSize;
     }
 }
